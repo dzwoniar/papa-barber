@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Papa Barber Shop - Męski Salon Fryzjerski | Kruszwica</title>
+    <meta name="description" content="Papa Barber Shop w Kruszwicy. Strzyżenie, broda, pielęgnacja twarzy. Ocena 5.0 ★ na Booksy. Rezerwuj online 24/7. ul. Spokojna 23.">
+    <meta name="keywords" content="barber Kruszwica, fryzjer męski Kruszwica, barber shop Kruszwica, strzyżenie męskie Kruszwica, broda Kruszwica">
+    <meta name="robots" content="index, follow">
+    <meta name="geo.placename" content="Kruszwica">
+    <meta name="geo.region" content="PL-KP">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Papa Barber Shop - Męski Salon Fryzjerski | Kruszwica">
+    <meta property="og:description" content="Rzemiosło, nie pośpiech. Ocena 5.0 na Booksy. Rezerwuj wizytę online 24/7.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pl_PL">
+    
+    <!-- Schema.org Local Business -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BarberShop",
+        "name": "Papa Barber Shop",
+        "alternateName": "BARBA PAPA BarberShop",
+        "image": "",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ul. Spokojna 23",
+            "addressLocality": "Kruszwica",
+            "postalCode": "88-150",
+            "addressCountry": "PL"
+        },
+        "telephone": "+48783977600",
+        "priceRange": "50-200 PLN",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "reviewCount": "121",
+            "bestRating": "5"
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+                "opens": "09:00",
+                "closes": "20:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "09:00",
+                "closes": "15:00"
+            }
+        ],
+        "url": ""
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --ink: #0F0E0C;
+            --cream: #F5F0E8;
+            --warm: #E8DFD0;
+            --gold: #B8953E;
+            --gold-light: #D4B565;
+            --leather: #6B4226;
+            --smoke: #3A3632;
+            --mist: #9B9488;
+            --white: #FEFCF9;
+            --red-accent: #A83228;
+            --shadow-sm: 0 1px 3px rgba(15,14,12,0.08);
+            --shadow-md: 0 4px 20px rgba(15,14,12,0.12);
+            --shadow-lg: 0 12px 40px rgba(15,14,12,0.18);
+            --radius: 4px;
+            --radius-lg: 8px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; font-size: 16px; }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            color: var(--ink);
+            background: var(--white);
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        /* ===== UTILITY ===== */
+        .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+        .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
+
+        /* ===== STICKY HEADER ===== */
+        .site-header {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+            background: rgba(254,252,249,0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(15,14,12,0.06);
+            transition: transform 0.3s ease;
+        }
+        .header-inner {
+            display: flex; align-items: center; justify-content: space-between;
+            max-width: 1120px; margin: 0 auto; padding: 14px 24px;
+        }
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900; font-size: 1.25rem;
+            letter-spacing: 0.02em; color: var(--ink);
+            text-decoration: none;
+        }
+        .logo-text span { color: var(--gold); }
+        .header-cta {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: var(--ink); color: var(--cream);
+            padding: 10px 22px; border-radius: var(--radius);
+            font-size: 0.875rem; font-weight: 600;
+            text-decoration: none; letter-spacing: 0.03em;
+            transition: background 0.25s ease, transform 0.2s ease;
+        }
+        .header-cta:hover { background: var(--smoke); transform: translateY(-1px); }
+        .header-phone {
+            display: none; color: var(--mist); font-size: 0.8rem;
+            text-decoration: none; margin-right: 16px;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            padding: 140px 0 80px;
+            background: linear-gradient(165deg, var(--cream) 0%, var(--white) 50%, var(--warm) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute; top: -30%; right: -15%; width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(184,149,62,0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .hero-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+        }
+        .hero-badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: var(--white); border: 1px solid rgba(184,149,62,0.25);
+            padding: 6px 14px; border-radius: 100px;
+            font-size: 0.8rem; font-weight: 600; color: var(--gold);
+            margin-bottom: 24px;
+            animation: fadeInUp 0.6s ease both;
+        }
+        .hero-badge svg { flex-shrink: 0; }
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.4rem, 5vw, 3.6rem);
+            font-weight: 900; line-height: 1.12;
+            color: var(--ink); margin-bottom: 20px;
+            animation: fadeInUp 0.6s ease 0.1s both;
+        }
+        .hero h1 em {
+            font-style: italic; color: var(--gold);
+        }
+        .hero-sub {
+            font-size: 1.1rem; line-height: 1.65; color: var(--smoke);
+            margin-bottom: 36px; max-width: 480px;
+            animation: fadeInUp 0.6s ease 0.2s both;
+        }
+        .hero-actions {
+            display: flex; gap: 14px; flex-wrap: wrap;
+            animation: fadeInUp 0.6s ease 0.3s both;
+        }
+        .btn-primary {
+            display: inline-flex; align-items: center; gap: 10px;
+            background: var(--gold); color: var(--white);
+            padding: 16px 32px; border-radius: var(--radius);
+            font-size: 1rem; font-weight: 700;
+            text-decoration: none; letter-spacing: 0.02em;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 16px rgba(184,149,62,0.3);
+        }
+        .btn-primary:hover {
+            background: var(--gold-light);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(184,149,62,0.4);
+        }
+        .btn-secondary {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: transparent; color: var(--ink);
+            padding: 16px 28px; border-radius: var(--radius);
+            font-size: 0.95rem; font-weight: 600;
+            text-decoration: none; border: 1.5px solid var(--ink);
+            transition: all 0.25s ease;
+        }
+        .btn-secondary:hover { background: var(--ink); color: var(--cream); }
+
+        /* Hero right - social proof strip */
+        .hero-proof {
+            display: flex; flex-direction: column; gap: 20px;
+            animation: fadeInUp 0.6s ease 0.4s both;
+        }
+        .proof-card {
+            background: var(--white);
+            border: 1px solid rgba(15,14,12,0.06);
+            border-radius: var(--radius-lg);
+            padding: 24px 28px;
+            box-shadow: var(--shadow-md);
+        }
+        .proof-stars { color: var(--gold); font-size: 1.3rem; letter-spacing: 2px; margin-bottom: 8px; }
+        .proof-score {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem; font-weight: 900; color: var(--ink);
+            line-height: 1;
+        }
+        .proof-label {
+            font-size: 0.85rem; color: var(--mist); margin-top: 4px; line-height: 1.5;
+        }
+        .proof-quotes { display: flex; flex-direction: column; gap: 12px; }
+        .mini-quote {
+            background: var(--cream); border-radius: var(--radius);
+            padding: 16px 20px; font-size: 0.9rem; line-height: 1.55;
+            color: var(--smoke); font-style: italic; position: relative;
+        }
+        .mini-quote::before {
+            content: '\201E'; font-family: 'Playfair Display', serif;
+            font-size: 2rem; color: var(--gold); position: absolute;
+            top: 6px; left: 10px; line-height: 1;
+        }
+        .mini-quote p { padding-left: 18px; }
+        .mini-quote-author {
+            font-style: normal; font-weight: 600; color: var(--ink);
+            font-size: 0.8rem; margin-top: 6px; padding-left: 18px;
+        }
+
+        /* ===== TRUST BAR ===== */
+        .trust-bar {
+            background: var(--ink); padding: 18px 0;
+        }
+        .trust-items {
+            display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;
+        }
+        .trust-item {
+            display: flex; align-items: center; gap: 10px;
+            color: var(--warm); font-size: 0.85rem; font-weight: 500;
+        }
+        .trust-item svg { color: var(--gold); flex-shrink: 0; }
+
+        /* ===== SECTION BASE ===== */
+        section { padding: 80px 0; }
+        .section-tag {
+            font-size: 0.75rem; font-weight: 700;
+            letter-spacing: 0.15em; text-transform: uppercase;
+            color: var(--gold); margin-bottom: 12px;
+        }
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+            font-weight: 900; line-height: 1.2;
+            color: var(--ink); margin-bottom: 16px;
+        }
+        .section-sub {
+            font-size: 1.05rem; line-height: 1.6; color: var(--smoke);
+            max-width: 600px;
+        }
+
+        /* ===== SERVICES ===== */
+        .services { background: var(--white); }
+        .services-header { text-align: center; margin-bottom: 56px; }
+        .services-header .section-sub { margin: 0 auto; }
+        .services-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .service-card {
+            background: var(--cream);
+            border: 1px solid rgba(15,14,12,0.04);
+            border-radius: var(--radius-lg);
+            padding: 32px 28px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative; overflow: hidden;
+        }
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+        .service-card.featured {
+            background: var(--ink); color: var(--cream);
+            border: 2px solid var(--gold);
+        }
+        .service-card.featured .service-name,
+        .service-card.featured .service-price { color: var(--cream); }
+        .service-card.featured .service-desc { color: var(--mist); }
+        .service-card.featured .service-tag { background: var(--gold); color: var(--ink); }
+        .service-tag {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--white);
+            font-size: 0.7rem; font-weight: 700;
+            letter-spacing: 0.08em; text-transform: uppercase;
+            padding: 4px 10px; border-radius: 3px;
+            margin-bottom: 16px;
+        }
+        .service-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.35rem; font-weight: 700;
+            color: var(--ink); margin-bottom: 8px;
+        }
+        .service-desc {
+            font-size: 0.9rem; line-height: 1.55;
+            color: var(--smoke); margin-bottom: 20px;
+        }
+        .service-bottom {
+            display: flex; align-items: flex-end; justify-content: space-between;
+        }
+        .service-price {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem; font-weight: 900;
+            color: var(--ink); line-height: 1;
+        }
+        .service-price small {
+            font-size: 0.85rem; font-weight: 400;
+            font-family: 'DM Sans', sans-serif; color: var(--mist);
+        }
+        .service-time {
+            font-size: 0.8rem; color: var(--mist); font-weight: 500;
+        }
+
+        /* Micro-services row */
+        .micro-services {
+            margin-top: 32px; padding-top: 32px;
+            border-top: 1px solid rgba(15,14,12,0.08);
+        }
+        .micro-title {
+            font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em;
+            text-transform: uppercase; color: var(--mist); margin-bottom: 16px;
+            text-align: center;
+        }
+        .micro-grid {
+            display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;
+        }
+        .micro-chip {
+            background: var(--cream); border: 1px solid rgba(15,14,12,0.06);
+            padding: 10px 18px; border-radius: 100px;
+            font-size: 0.85rem; font-weight: 500; color: var(--smoke);
+            display: flex; align-items: center; gap: 8px;
+        }
+        .micro-chip strong { color: var(--ink); }
+
+        /* ===== WHY US / DIFFERENTIATORS ===== */
+        .why-us { background: var(--cream); }
+        .why-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr);
+            gap: 32px; margin-top: 48px;
+        }
+        .why-card {
+            text-align: center; padding: 32px 24px;
+        }
+        .why-icon {
+            width: 56px; height: 56px;
+            background: var(--white);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 20px;
+            box-shadow: var(--shadow-sm);
+            color: var(--gold);
+        }
+        .why-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem; font-weight: 700;
+            margin-bottom: 10px; color: var(--ink);
+        }
+        .why-card p {
+            font-size: 0.9rem; line-height: 1.6; color: var(--smoke);
+        }
+
+        /* ===== REVIEWS ===== */
+        .reviews { background: var(--white); }
+        .reviews-header { text-align: center; margin-bottom: 48px; }
+        .reviews-header .section-sub { margin: 0 auto; }
+        .reviews-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
+        }
+        .review-card {
+            background: var(--cream);
+            border-radius: var(--radius-lg);
+            padding: 28px;
+            border: 1px solid rgba(15,14,12,0.04);
+        }
+        .review-stars { color: var(--gold); font-size: 1rem; letter-spacing: 1px; margin-bottom: 12px; }
+        .review-text {
+            font-size: 0.95rem; line-height: 1.65;
+            color: var(--smoke); font-style: italic; margin-bottom: 16px;
+        }
+        .review-author {
+            font-weight: 700; font-size: 0.85rem; color: var(--ink);
+        }
+        .review-source {
+            font-size: 0.75rem; color: var(--mist); margin-top: 2px;
+        }
+
+        /* ===== BOOKING SECTION ===== */
+        .booking {
+            background: var(--ink);
+            color: var(--cream);
+            padding: 80px 0;
+        }
+        .booking-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start;
+        }
+        .booking .section-tag { color: var(--gold); }
+        .booking .section-title { color: var(--cream); }
+        .booking .section-sub { color: var(--mist); }
+        .booking-benefits { margin-top: 32px; }
+        .booking-benefit {
+            display: flex; align-items: flex-start; gap: 14px;
+            padding: 14px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+        .booking-benefit svg { color: var(--gold); flex-shrink: 0; margin-top: 2px; }
+        .booking-benefit p { font-size: 0.95rem; line-height: 1.55; color: var(--warm); }
+        .booking-benefit strong { color: var(--cream); }
+
+        .cal-embed-wrapper {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            min-height: 450px;
+            box-shadow: var(--shadow-lg);
+        }
+        .cal-placeholder {
+            text-align: center; padding: 60px 24px;
+            color: var(--smoke);
+        }
+        .cal-placeholder h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem; color: var(--ink); margin-bottom: 12px;
+        }
+        .cal-placeholder p {
+            font-size: 0.9rem; line-height: 1.6; margin-bottom: 24px;
+        }
+        .cal-placeholder .btn-primary { display: inline-flex; }
+        .cal-placeholder code {
+            display: block; margin-top: 24px;
+            background: var(--cream); padding: 16px;
+            border-radius: var(--radius); font-size: 0.75rem;
+            color: var(--smoke); text-align: left; word-break: break-all;
+        }
+
+        /* ===== LOCATION / MAP ===== */
+        .location { background: var(--cream); }
+        .location-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 48px;
+            align-items: center;
+        }
+        .location-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem; margin-bottom: 20px;
+        }
+        .location-detail {
+            display: flex; align-items: flex-start; gap: 12px;
+            margin-bottom: 16px;
+        }
+        .location-detail svg { color: var(--gold); flex-shrink: 0; margin-top: 3px; }
+        .location-detail p { font-size: 0.95rem; line-height: 1.55; color: var(--smoke); }
+        .location-detail strong { color: var(--ink); display: block; }
+        .map-wrapper {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            height: 360px;
+        }
+        .map-wrapper iframe { width: 100%; height: 100%; border: 0; }
+
+        /* ===== FAQ ===== */
+        .faq { background: var(--white); }
+        .faq-header { text-align: center; margin-bottom: 48px; }
+        .faq-list { max-width: 720px; margin: 0 auto; }
+        .faq-item {
+            border-bottom: 1px solid rgba(15,14,12,0.08);
+        }
+        .faq-q {
+            width: 100%; text-align: left; background: none; border: none;
+            padding: 20px 0; cursor: pointer;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1.05rem; font-weight: 600; color: var(--ink);
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .faq-q:hover { color: var(--gold); }
+        .faq-q svg { transition: transform 0.3s ease; flex-shrink: 0; margin-left: 16px; color: var(--mist); }
+        .faq-q.active svg { transform: rotate(45deg); color: var(--gold); }
+        .faq-a {
+            max-height: 0; overflow: hidden;
+            transition: max-height 0.35s ease, padding 0.35s ease;
+        }
+        .faq-a.open { max-height: 300px; padding-bottom: 20px; }
+        .faq-a p {
+            font-size: 0.95rem; line-height: 1.7; color: var(--smoke);
+        }
+
+        /* ===== FINAL CTA ===== */
+        .final-cta {
+            background: linear-gradient(165deg, var(--ink) 0%, var(--smoke) 100%);
+            padding: 80px 0; text-align: center; color: var(--cream);
+        }
+        .final-cta .section-title { color: var(--cream); margin-bottom: 12px; }
+        .final-cta p {
+            font-size: 1.05rem; color: var(--mist);
+            max-width: 520px; margin: 0 auto 32px; line-height: 1.6;
+        }
+        .final-cta .btn-primary { font-size: 1.1rem; padding: 18px 40px; }
+
+        /* ===== FOOTER ===== */
+        .site-footer {
+            background: var(--ink); padding: 40px 0 24px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+        .footer-inner {
+            display: flex; justify-content: space-between; align-items: center;
+            flex-wrap: wrap; gap: 16px;
+        }
+        .footer-brand {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900; font-size: 1.1rem; color: var(--cream);
+        }
+        .footer-brand span { color: var(--gold); }
+        .footer-links { display: flex; gap: 24px; }
+        .footer-links a {
+            color: var(--mist); text-decoration: none;
+            font-size: 0.85rem; transition: color 0.2s;
+        }
+        .footer-links a:hover { color: var(--gold); }
+        .footer-copy {
+            width: 100%; text-align: center;
+            padding-top: 24px; margin-top: 24px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            font-size: 0.75rem; color: var(--mist);
+        }
+
+        /* ===== MOBILE STICKY CTA ===== */
+        .mobile-cta {
+            display: none; position: fixed; bottom: 0; left: 0; right: 0;
+            z-index: 99; background: var(--ink);
+            padding: 12px 20px;
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+        }
+        .mobile-cta a {
+            display: flex; align-items: center; justify-content: center; gap: 10px;
+            background: var(--gold); color: var(--white);
+            padding: 14px; border-radius: var(--radius);
+            font-size: 1rem; font-weight: 700; text-decoration: none;
+            width: 100%;
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(24px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .reveal {
+            opacity: 0; transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 900px) {
+            .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+            .hero { padding: 120px 0 60px; }
+            .booking-grid { grid-template-columns: 1fr; }
+            .location-grid { grid-template-columns: 1fr; }
+            .why-grid { grid-template-columns: 1fr; gap: 16px; }
+            .why-card { text-align: left; display: flex; gap: 20px; align-items: flex-start; padding: 20px 0; }
+            .why-icon { margin: 0; flex-shrink: 0; }
+        }
+        @media (max-width: 640px) {
+            .hero h1 { font-size: 2rem; }
+            .header-phone { display: inline-flex; }
+            .services-grid { grid-template-columns: 1fr; }
+            .reviews-grid { grid-template-columns: 1fr; }
+            .trust-items { gap: 20px; }
+            .mobile-cta { display: block; }
+            .site-footer { padding-bottom: 80px; }
+            section { padding: 60px 0; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ===== STICKY HEADER ===== -->
+<header class="site-header">
+    <div class="header-inner">
+        <a href="#" class="logo-text">PAPA <span>BARBER</span></a>
+        <div style="display:flex;align-items:center;">
+            <a href="tel:+48783977600" class="header-phone">+48 783 977 600</a>
+            <a href="#rezerwacja" class="header-cta">
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+                Zarezerwuj
+            </a>
+        </div>
+    </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="start">
+    <div class="container">
+        <div class="hero-grid">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg>
+                    Ocena 5.0 na Booksy &middot; 121 opinii
+                </div>
+                <h1>Rzemiosło,<br>nie <em>pośpiech.</em></h1>
+                <p class="hero-sub">Męski salon fryzjerski w Kruszwicy. Precyzyjne cięcie, pielęgnacja brody i rytuał relaksacyjny z ciepłym kompresem. Rezerwuj online, o każdej porze.</p>
+                <div class="hero-actions">
+                    <a href="#rezerwacja" class="btn-primary">
+                        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+                        Zarezerwuj wizytę
+                    </a>
+                    <a href="#uslugi" class="btn-secondary">
+                        Zobacz cennik
+                        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-proof">
+                <div class="proof-card">
+                    <div class="proof-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <div class="proof-score">5.0 <span style="font-size:1rem;font-family:'DM Sans',sans-serif;color:var(--mist);font-weight:400;">/ 5</span></div>
+                    <div class="proof-label">Średnia z 121 opinii na Booksy</div>
+                </div>
+                <div class="proof-quotes">
+                    <div class="mini-quote">
+                        <p>Jak zawsze perfekcyjnie. Profesjonalne podejście i mega atmosfera.</p>
+                        <div class="mini-quote-author">— Klient Booksy</div>
+                    </div>
+                    <div class="mini-quote">
+                        <p>Najlepszy barber w okolicy. Broda wygląda idealnie przez 3 tygodnie.</p>
+                        <div class="mini-quote-author">— Klient Booksy</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== TRUST BAR ===== -->
+<div class="trust-bar">
+    <div class="trust-items">
+        <div class="trust-item">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            Rezerwacja online 24/7
+        </div>
+        <div class="trust-item">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            Wieczorne terminy do 20:00
+        </div>
+        <div class="trust-item">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            Ciepły kompres w cenie usługi
+        </div>
+        <div class="trust-item">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            ul. Spokojna 23, Kruszwica
+        </div>
+    </div>
+</div>
+
+<!-- ===== SERVICES ===== -->
+<section class="services" id="uslugi">
+    <div class="container">
+        <div class="services-header reveal">
+            <div class="section-tag">Cennik</div>
+            <h2 class="section-title">Usługi i ceny</h2>
+            <p class="section-sub">Każda wizyta to czas poświęcony wyłącznie Tobie. Bez taśmy, bez pośpiechu.</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card reveal">
+                <div class="service-name">Klasyczne Cięcie z Formowaniem</div>
+                <p class="service-desc">Strzyżenie nożyczkami i maszynką, mycie, stylizacja. Precyzyjne formowanie z uwzględnieniem kształtu głowy i typu włosa.</p>
+                <div class="service-bottom">
+                    <div class="service-price">55 <small>PLN</small></div>
+                    <div class="service-time">30-40 min</div>
+                </div>
+            </div>
+            <div class="service-card reveal">
+                <div class="service-name">Korekta Brody z Kompresem</div>
+                <p class="service-desc">Precyzyjne kształtowanie linii brody brzytwą i trymerem. Ciepły kompres rozluźniający skórę przed goleniem.</p>
+                <div class="service-bottom">
+                    <div class="service-price">55 <small>PLN</small></div>
+                    <div class="service-time">30 min</div>
+                </div>
+            </div>
+            <div class="service-card featured reveal">
+                <div class="service-tag">Najpopularniejsze</div>
+                <div class="service-name">Combo: Cięcie + Broda + Kompres</div>
+                <p class="service-desc">Pełna obsługa: strzyżenie włosów, formowanie brody brzytwą, ciepły kompres i stylizacja. Kompletna metamorfoza w jednej wizycie.</p>
+                <div class="service-bottom">
+                    <div class="service-price">105 <small>PLN</small></div>
+                    <div class="service-time">70-80 min</div>
+                </div>
+            </div>
+            <div class="service-card reveal">
+                <div class="service-tag" style="background:var(--leather);">Premium</div>
+                <div class="service-name">Combo Premium z Rytuałem Pielęgnacyjnym</div>
+                <p class="service-desc">Wszystko z Combo plus relaksacyjny masaż głowy, maska nawilżająca na twarz i pielęgnacja olejkiem do brody. Pełen rytuał odnowy.</p>
+                <div class="service-bottom">
+                    <div class="service-price">140 <small>PLN</small></div>
+                    <div class="service-time">80-90 min</div>
+                </div>
+            </div>
+            <div class="service-card reveal" style="border:2px dashed rgba(184,149,62,0.3);">
+                <div class="service-tag" style="background:var(--red-accent);">Ekskluzywny</div>
+                <div class="service-name">Combo Gold: Kompletny Rytuał Gentleman</div>
+                <p class="service-desc">Absolutnie wszystko. Cięcie, broda, kompres, masaż, maska, pielęgnacja twarzy, depilacja detali, olejki. Dla tych, którzy chcą pełen luksus.</p>
+                <div class="service-bottom">
+                    <div class="service-price">200 <small>PLN</small></div>
+                    <div class="service-time">100 min</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Micro-services -->
+        <div class="micro-services reveal">
+            <div class="micro-title">Dodatkowe usługi do każdej wizyty</div>
+            <div class="micro-grid">
+                <div class="micro-chip">Depilacja nosa woskiem <strong>20 PLN</strong></div>
+                <div class="micro-chip">Opalanie uszu turecką metodą <strong>20 PLN</strong></div>
+                <div class="micro-chip">Woskowanie detali twarzy <strong>20 PLN</strong></div>
+                <div class="micro-chip">Maska nawilżająca <strong>25 PLN</strong></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== WHY US ===== -->
+<section class="why-us" id="dlaczego-my">
+    <div class="container">
+        <div style="text-align:center;" class="reveal">
+            <div class="section-tag">Dlaczego Papa Barber</div>
+            <h2 class="section-title">Czym się różnimy</h2>
+        </div>
+        <div class="why-grid">
+            <div class="why-card reveal">
+                <div class="why-icon">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                </div>
+                <div>
+                    <h3>Wieczorne terminy</h3>
+                    <p>Pracujesz do 17:00? U nas zarezerwujesz wizytę nawet na 19:00. Jedyny barbershop w Kruszwicy z wieczornym grafikiem.</p>
+                </div>
+            </div>
+            <div class="why-card reveal">
+                <div class="why-icon">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </div>
+                <div>
+                    <h3>Rzemiosło, nie taśma</h3>
+                    <p>Rezerwujemy na Twój zabieg 80-90 minut. Nie gonisz się z następnym klientem. Spokojnie, precyzyjnie, po męsku.</p>
+                </div>
+            </div>
+            <div class="why-card reveal">
+                <div class="why-icon">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <div>
+                    <h3>121 opinii, ocena 5.0</h3>
+                    <p>Każda opinia mówi to samo: profesjonalizm, świetna atmosfera, perfekcyjny efekt. Zero kompromisów.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== REVIEWS ===== -->
+<section class="reviews" id="opinie">
+    <div class="container">
+        <div class="reviews-header reveal">
+            <div class="section-tag">Opinie</div>
+            <h2 class="section-title">Co mówią klienci</h2>
+            <p class="section-sub">Autentyczne opinie z profilu Booksy. Każda zweryfikowana po wizycie.</p>
+        </div>
+        <div class="reviews-grid">
+            <div class="review-card reveal">
+                <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="review-text">Jak zawsze na najwyższym poziomie. Profesjonalne podejście, precyzyjna robota i mega fajna atmosfera. Polecam każdemu.</p>
+                <div class="review-author">Klient Booksy</div>
+                <div class="review-source">Zweryfikowana wizyta</div>
+            </div>
+            <div class="review-card reveal">
+                <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="review-text">Najlepszy barber w okolicy, bez dwóch zdań. Broda idealnie wymodelowana, włosy dokładnie tak jak chciałem. Wracam co miesiąc.</p>
+                <div class="review-author">Klient Booksy</div>
+                <div class="review-source">Zweryfikowana wizyta</div>
+            </div>
+            <div class="review-card reveal">
+                <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="review-text">Pierwszy raz byłem i od razu wiem, że wracam. Spokojnie, bez pośpiechu, dokładnie. Plus super kawa.</p>
+                <div class="review-author">Klient Booksy</div>
+                <div class="review-source">Zweryfikowana wizyta</div>
+            </div>
+            <div class="review-card reveal">
+                <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="review-text">Combo premium to coś niesamowitego. Ciepły kompres, masaż głowy, pielęgnacja - wychodzisz jak nowy człowiek. Warto każdej złotówki.</p>
+                <div class="review-author">Klient Booksy</div>
+                <div class="review-source">Zweryfikowana wizyta</div>
+            </div>
+            <div class="review-card reveal">
+                <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="review-text">Wreszcie nie muszę jeździć do Inowrocławia. Jakość na tym samym albo wyższym poziomie, a mam 5 minut z domu.</p>
+                <div class="review-author">Klient Booksy</div>
+                <div class="review-source">Zweryfikowana wizyta</div>
+            </div>
+            <div class="review-card reveal">
+                <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="review-text">Z czystym sumieniem polecam. Rezerwuję wieczorne terminy po pracy - wygoda nie do pobicia w Kruszwicy.</p>
+                <div class="review-author">Klient Booksy</div>
+                <div class="review-source">Zweryfikowana wizyta</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== BOOKING ===== -->
+<section class="booking" id="rezerwacja">
+    <div class="container">
+        <div class="booking-grid">
+            <div class="reveal">
+                <div class="section-tag">Rezerwacja</div>
+                <h2 class="section-title">Wybierz termin, który Ci pasuje</h2>
+                <p class="section-sub">Kalendarz dostępny 24/7. Rezerwujesz w minutę, bez dzwonienia. Wieczorne terminy do 20:00.</p>
+                <div class="booking-benefits">
+                    <div class="booking-benefit">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        <p><strong>Bez dzwonienia.</strong> Rezerwujesz online o 2:00 w nocy albo w przerwie na lunch. Kiedy chcesz.</p>
+                    </div>
+                    <div class="booking-benefit">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        <p><strong>Wieczory i weekendy.</strong> Sloty do 20:00 w tygodniu, soboty do 15:00.</p>
+                    </div>
+                    <div class="booking-benefit">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        <p><strong>Przypomnienie SMS.</strong> Dostaniesz przypomnienie dzień przed wizytą. Nie zapomnisz.</p>
+                    </div>
+                    <div class="booking-benefit">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        <p><strong>Bezpłatna zmiana terminu.</strong> Plany się zmieniły? Przesuń wizytę bez stresu.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cal-embed-wrapper reveal">
+                <!-- 
+                    =============================================
+                    INSTRUKCJA WDROŻENIA Cal.com
+                    =============================================
+                    
+                    1. Załóż darmowe konto na https://cal.com
+                    2. Stwórz osobne "Event Types" dla każdej usługi:
+                       - Klasyczne Cięcie (40 min)
+                       - Korekta Brody (30 min)
+                       - Combo (80 min)
+                       - Combo Premium (90 min)
+                       - Combo Gold (100 min)
+                    3. Ustaw godziny dostępności (pon-pt 9:00-20:00, sob 9:00-15:00)
+                    4. Skopiuj swój link Cal.com (np. cal.com/papa-barber)
+                    5. Zamień poniższy placeholder na embed code:
+                    
+                    <script src="https://app.cal.com/embed/embed.js"></script>
+                    <cal-inline calLink="papa-barber/uslugi"></cal-inline>
+                    
+                    Lub użyj iframe:
+                    <iframe src="https://cal.com/papa-barber" 
+                            style="width:100%;height:600px;border:none;">
+                    </iframe>
+                    =============================================
+                -->
+                <div class="cal-placeholder">
+                    <h3>Kalendarz rezerwacji</h3>
+                    <p>Wybierz usługę i wolny termin. Potwierdzenie otrzymasz od razu na email lub SMS.</p>
+                    <a href="tel:+48783977600" class="btn-primary" style="margin-bottom:16px;">
+                        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        Zadzwoń: 783 977 600
+                    </a>
+                    <code>
+                        <!-- Tutaj wstaw embed Cal.com po założeniu konta. Szczegóły w komentarzu HTML powyżej. -->
+                        Placeholder: Wstaw tu kod embed Cal.com (cal-inline lub iframe). Instrukcja w kodzie HTML.
+                    </code>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== LOCATION ===== -->
+<section class="location" id="dojazd">
+    <div class="container">
+        <div class="location-grid">
+            <div class="location-info reveal">
+                <div class="section-tag">Lokalizacja</div>
+                <h3>Znajdziesz nas łatwo</h3>
+                <div class="location-detail">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <p><strong>ul. Spokojna 23, 88-150 Kruszwica</strong>Spokojna ulica, łatwy dojazd z centrum. Parking pod drzwiami.</p>
+                </div>
+                <div class="location-detail">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                    <p><strong>Godziny otwarcia</strong>Poniedziałek - Piątek: 9:00 - 20:00<br>Sobota: 9:00 - 15:00<br>Niedziela: nieczynne</p>
+                </div>
+                <div class="location-detail">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    <p><strong>+48 783 977 600</strong>Wolisz zadzwonić? Odbieramy w godzinach otwarcia.</p>
+                </div>
+            </div>
+            <div class="map-wrapper reveal">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2434.5!2d18.3267!3d52.6756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTLCsDQwJzMyLjIiTiAxOMKwMTknMzYuMSJF!5e0!3m2!1spl!2spl!4v1"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                    title="Mapa Papa Barber Shop Kruszwica">
+                </iframe>
+                <!-- UWAGA: Zamień src na prawdziwy embed z Google Maps dla "Papa Barber Shop Kruszwica" -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="faq" id="faq">
+    <div class="container">
+        <div class="faq-header reveal">
+            <div class="section-tag">FAQ</div>
+            <h2 class="section-title">Częste pytania</h2>
+        </div>
+        <div class="faq-list">
+            <div class="faq-item reveal">
+                <button class="faq-q" onclick="toggleFaq(this)">
+                    Czy muszę rezerwować z wyprzedzeniem?
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+                </button>
+                <div class="faq-a"><p>Tak, rezerwacja pozwala zarezerwować dla Ciebie pełny blok czasowy (nawet 90 minut) bez pośpiechu. Możesz zarezerwować online o dowolnej porze - kalendarz jest dostępny 24/7.</p></div>
+            </div>
+            <div class="faq-item reveal">
+                <button class="faq-q" onclick="toggleFaq(this)">
+                    Ile kosztuje strzyżenie z brodą?
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+                </button>
+                <div class="faq-a"><p>Combo (cięcie + broda + kompres) kosztuje 105 PLN za 70-80 minut. Combo Premium z masażem i pielęgnacją to 140 PLN za 80-90 minut. Pełny cennik znajdziesz w sekcji Usługi powyżej.</p></div>
+            </div>
+            <div class="faq-item reveal">
+                <button class="faq-q" onclick="toggleFaq(this)">
+                    Czy macie wieczorne terminy?
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+                </button>
+                <div class="faq-a"><p>Tak. Przyjmujemy do 20:00 w dni robocze. Ostatni slot na combo to zazwyczaj 18:30. Wieczorne terminy są popularne, więc warto rezerwować z 2-3 dniowym wyprzedzeniem.</p></div>
+            </div>
+            <div class="faq-item reveal">
+                <button class="faq-q" onclick="toggleFaq(this)">
+                    Czy mogę odwołać lub przełożyć wizytę?
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+                </button>
+                <div class="faq-a"><p>Tak, bezpłatnie do 24 godzin przed wizytą. Zmienisz termin w tym samym kalendarzu, w którym rezerwowałeś.</p></div>
+            </div>
+            <div class="faq-item reveal">
+                <button class="faq-q" onclick="toggleFaq(this)">
+                    Co to są mikro-usługi (woskowanie, opalanie uszu)?
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+                </button>
+                <div class="faq-a"><p>To szybkie zabiegi estetyczne, które możesz dodać do każdej wizyty. Depilacja nosa woskiem, opalanie uszu turecką metodą albo maska nawilżająca - każdy trwa 10 minut i kosztuje 20-25 PLN. Barber zaproponuje, jeśli zauważy, że mogłoby Ci to pomóc.</p></div>
+            </div>
+            <div class="faq-item reveal">
+                <button class="faq-q" onclick="toggleFaq(this)">
+                    Czy jest parking?
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+                </button>
+                <div class="faq-a"><p>Tak, można parkować bezpośrednio przed salonem na ulicy Spokojnej. Bez problemu z miejscami.</p></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FINAL CTA ===== -->
+<section class="final-cta">
+    <div class="container reveal">
+        <div class="section-title">Gotowy na zmianę?</div>
+        <p>Zarezerwuj wizytę w 60 sekund. Bez dzwonienia, bez czekania. Wieczorne terminy dostępne.</p>
+        <a href="#rezerwacja" class="btn-primary">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+            Zarezerwuj teraz
+        </a>
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-inner">
+            <div class="footer-brand">PAPA <span>BARBER</span></div>
+            <div class="footer-links">
+                <a href="#uslugi">Cennik</a>
+                <a href="#opinie">Opinie</a>
+                <a href="#rezerwacja">Rezerwacja</a>
+                <a href="#dojazd">Dojazd</a>
+                <a href="tel:+48783977600">Telefon</a>
+            </div>
+        </div>
+        <div class="footer-copy">
+            &copy; 2026 Papa Barber Shop. ul. Spokojna 23, 88-150 Kruszwica. Wszelkie prawa zastrzeżone.
+        </div>
+    </div>
+</footer>
+
+<!-- ===== MOBILE STICKY CTA ===== -->
+<div class="mobile-cta">
+    <a href="#rezerwacja">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        Zarezerwuj wizytę
+    </a>
+</div>
+
+<script>
+    // FAQ accordion
+    function toggleFaq(btn) {
+        const answer = btn.nextElementSibling;
+        const isOpen = answer.classList.contains('open');
+        // Close all
+        document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('open'));
+        document.querySelectorAll('.faq-q').forEach(q => q.classList.remove('active'));
+        if (!isOpen) {
+            answer.classList.add('open');
+            btn.classList.add('active');
+        }
+    }
+
+    // Reveal on scroll
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                const offset = 80;
+                const y = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                window.scrollTo({ top: y, behavior: 'smooth' });
+            }
+        });
+    });
+
+    // Header hide on scroll down, show on scroll up
+    let lastScroll = 0;
+    const header = document.querySelector('.site-header');
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+        if (currentScroll > lastScroll && currentScroll > 200) {
+            header.style.transform = 'translateY(-100%)';
+        } else {
+            header.style.transform = 'translateY(0)';
+        }
+        lastScroll = currentScroll;
+    });
+</script>
+
+</body>
+</html>
